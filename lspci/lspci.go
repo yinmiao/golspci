@@ -83,7 +83,7 @@ func parseLSPCI(r io.Reader) (map[string]map[string]string, error) {
 }
 
 func FindBin(binary string) (string, error) {
-	locations := []string{"/sbin", "/usr/sbin", "/usr/local/sbin"}
+	locations := []string{"/usr/bin", "/sbin", "/usr/sbin", "/usr/local/sbin"}
 
 	for _, path := range locations {
 		lookup := path + "/" + binary
